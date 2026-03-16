@@ -1,0 +1,14 @@
+{
+  "required" : [ "query" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "query" : {
+      "title" : "query",
+      "description" : "Ask for the most recent order",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

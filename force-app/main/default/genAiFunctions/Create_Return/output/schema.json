@@ -1,0 +1,24 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "rma_instructions" : {
+      "title" : "rma_instructions",
+      "description" : "This is guidance to provide back to the user",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "rma_number" : {
+      "title" : "rma_number",
+      "description" : "This is the RMA Number of the Return the user just initiated",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

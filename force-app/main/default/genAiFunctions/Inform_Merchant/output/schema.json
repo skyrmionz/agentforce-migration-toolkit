@@ -1,0 +1,15 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "merchant_informed" : {
+      "title" : "merchant_informed",
+      "description" : "This is confirmation that the merchant has been informed of the return",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

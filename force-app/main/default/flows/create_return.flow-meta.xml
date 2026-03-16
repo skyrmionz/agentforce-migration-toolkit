@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <description>Create a return for a selected order.</description>
+    <environments>Default</environments>
+    <interviewLabel>Create Return {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create Return</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Contact</name>
+        <label>Get Contact</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Contact</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>This is the ID of the Order that the user has chosen to return</description>
+        <name>order_id</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>This is guidance to provide back to the user</description>
+        <name>rma_instructions</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>Your return has been approved! You will receive a refund to your preferred card on your Pronto Account.</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>This is the RMA Number of the Return the user just initiated</description>
+        <name>rma_number</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>RMA-391021</stringValue>
+        </value>
+    </variables>
+</Flow>

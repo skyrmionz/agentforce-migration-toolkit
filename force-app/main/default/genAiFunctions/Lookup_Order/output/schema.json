@@ -1,0 +1,42 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "order_id" : {
+      "title" : "order_id",
+      "description" : "This is the Record ID of the Order",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "order_is_current" : {
+      "title" : "order_is_current",
+      "description" : "This is if the order is current or not",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : false,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "order_return_eligible" : {
+      "title" : "order_return_eligible",
+      "description" : "This is if the order is eligible for return",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    },
+    "order_summary" : {
+      "title" : "order_summary",
+      "description" : "This is the summary of the Order requested",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true,
+      "copilotAction:useHydratedPrompt" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

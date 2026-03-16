@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BotVersion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>v2</fullName>
+    <entryDialog>Hybrid_Reasoning_Agent_Main</entryDialog>
+    <botDialogs>
+        <botSteps>
+            <stepIdentifier>step_1</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Hybrid_Reasoning_Agent_Main</developerName>
+        <label>Main</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+</BotVersion>

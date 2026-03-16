@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <description>Get the loyalty tier of the customer</description>
+    <environments>Default</environments>
+    <interviewLabel>Get Loyalty Tier {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Get Loyalty Tier</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Contact</name>
+        <label>Get Contact</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>Alex Morgan</stringValue>
+            </value>
+        </filters>
+        <object>Contact</object>
+        <outputAssignments>
+            <assignToReference>loyalty_tier</assignToReference>
+            <field>Loyalty_Tier__c</field>
+        </outputAssignments>
+    </recordLookups>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Contact</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>This is the user&apos;s loyalty tier</description>
+        <name>loyalty_tier</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>Basic</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>This is the user&apos;s email</description>
+        <name>member_email</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>alex.morgan@example.com</stringValue>
+        </value>
+    </variables>
+</Flow>

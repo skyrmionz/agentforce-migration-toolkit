@@ -1,0 +1,28 @@
+{
+  "required" : [ "description", "subject" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "description" : {
+      "title" : "description",
+      "description" : "This is the description of the case the user would like to provide.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "member_number" : {
+      "title" : "member_number",
+      "description" : "This is the user's member number",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "subject" : {
+      "title" : "subject",
+      "description" : "This is the subject of the case.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

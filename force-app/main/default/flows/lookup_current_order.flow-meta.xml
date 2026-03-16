@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <description>Retrieve the most current order details.</description>
+    <environments>Default</environments>
+    <interviewLabel>Lookup Current Order {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lookup Current Order</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Contact</name>
+        <label>Get Contact</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Contact</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>This is the Record ID of the Order</description>
+        <name>order_id</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>10290310</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>This is if the order is current or not</description>
+        <name>order_is_current</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <booleanValue>true</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <description>This is if the order is eligible for return</description>
+        <name>order_return_eligible</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <booleanValue>true</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <description>This is the summary of the Order requested</description>
+        <name>order_summary</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>Order is out for delivery to the customer. The restaurant is Danny&apos;s Italian - with an order of 1x Pasta Arrabiata, 1x Pesto Gnocchi, and 2x Grandma&apos;s Meatballs, for a total of $48.90.</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Ask for the most recent order</description>
+        <name>query</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>
