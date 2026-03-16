@@ -2,6 +2,39 @@
 
 This project migrates Agentforce agents and all their dependencies between Salesforce orgs using the Salesforce CLI (`sf`).
 
+## Prerequisites
+
+### Salesforce CLI
+The migration requires the Salesforce CLI (`sf`). Check if it's installed:
+```bash
+sf --version
+```
+
+If not installed, install it with one of these methods:
+
+**macOS (Homebrew):**
+```bash
+brew install sf
+```
+
+**npm (any platform):**
+```bash
+npm install -g @salesforce/cli
+```
+
+**Windows (installer):**
+Download from https://developer.salesforce.com/tools/salesforcecli
+
+After installing, verify it works:
+```bash
+sf --version
+```
+
+### GitHub CLI (optional, for repo operations)
+```bash
+brew install gh   # macOS
+```
+
 ## What Gets Migrated
 
 - **Agents**: Hybrid_Reasoning_Agent, Basic_Agent (EinsteinServiceAgent type, Atlas ConcurrentMultiAgentOrchestration)
